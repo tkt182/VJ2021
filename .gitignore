@@ -72,6 +72,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# soundfile
+Assets/Scenes/Common/Sound.mp3
+Assets/Scenes/Common/Sound.mp3.meta
+
 # 3rd Party Assets
 Assets/MidiJack.meta
 Assets/MidiJack/

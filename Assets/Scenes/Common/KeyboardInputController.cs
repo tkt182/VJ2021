@@ -18,6 +18,12 @@ public class KeyboardInputController : MonoBehaviour {
         // Layer1
         GetKeyDown(KeyCode.Z);
 
+        // Scene0
+        GetKeyDown(KeyCode.V);
+        GetKeyDown(KeyCode.B);
+        GetKeyDown(KeyCode.N);
+        GetKeyDown(KeyCode.M);
+
     }
 
     void GetKeyDown(UnityEngine.KeyCode keyCode) {
@@ -25,6 +31,7 @@ public class KeyboardInputController : MonoBehaviour {
             _controlParameters.SetKeyboradInputValue(keyCode, true);
         }
         _controlParameters.UpdateEffectStatus();
+        _controlParameters.UpdateScene0Parameters();
     }
 
     void GetEscapeKey() {
