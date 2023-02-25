@@ -216,7 +216,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 90
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -437,7 +437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118779082}
   m_LocalRotation: {x: -0.2030992, y: 0.7868951, z: -0.33538535, w: -0.47651199}
-  m_LocalPosition: {x: 11.35125, y: 7.4667225, z: 3.8836577}
+  m_LocalPosition: {x: 6.8, y: 6.5, z: 8.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1658378340}
@@ -561,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479283602}
   m_LocalRotation: {x: -0.38085067, y: 0.26351994, z: -0.11418659, w: -0.8789035}
-  m_LocalPosition: {x: -1.4939542, y: 14.3510065, z: -12.735955}
+  m_LocalPosition: {x: 6.62, y: 6.1, z: -11.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1658378340}
@@ -657,7 +657,7 @@ MonoBehaviour:
   _enableAudioInput: 0
   _audioBoost: 0
   _cubePrefab: {fileID: 9134626453930684110, guid: 37112258683fbce4687a72a3e99be111, type: 3}
-  _cubeMaterial: {fileID: 2100000, guid: cc80b82e8d8e3c34f88dae1039c6b60d, type: 2}
+  _cubeMaterial: {fileID: 2100000, guid: 0065fe5bbf2851b4784cc3ba748b651a, type: 2}
   _parentTran: {fileID: 10848779}
 --- !u!114 &1616531301
 MonoBehaviour:
