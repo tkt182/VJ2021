@@ -1784,6 +1784,7 @@ MonoBehaviour:
   _inputSpectrum: {fileID: 1215590757}
   _inputLevel: {fileID: 1215590759}
   _logScale: 1
+  _useAudioFile: 0
 --- !u!114 &1215590757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,7 +2621,7 @@ GameObject:
   - component: {fileID: 1405601660}
   - component: {fileID: 1405601661}
   m_Layer: 0
-  m_Name: AudioInput
+  m_Name: MainAudioInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -248,12 +248,12 @@ GameObject:
   - component: {fileID: 866661965}
   - component: {fileID: 866661966}
   m_Layer: 0
-  m_Name: AudioInput
+  m_Name: Scene0AudioInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &866661965
 Transform:
   m_ObjectHideFlags: 0
@@ -621,6 +621,7 @@ GameObject:
   - component: {fileID: 1616531299}
   - component: {fileID: 1616531300}
   - component: {fileID: 1616531301}
+  - component: {fileID: 1616531302}
   m_Layer: 6
   m_Name: Scene0Controller
   m_TagString: Untagged
@@ -671,6 +672,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ee90b2f1ea67847b63f11601ff70c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1616531302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616531298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a025ad03c01253744ae27cdba6429b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1658378339
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +732,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658378339}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7abff88ba70cc8e46b74f387a6e8d553, type: 3}
   m_Name: 
