@@ -2,38 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyboardInputController : MonoBehaviour {
+public class Scene1KeyboardInputController : MonoBehaviour
+{
+
     ControlParameters _controlParameters;
 
-    void Start() {
+    void Start()
+    {
         _controlParameters = ControlParameters.GetInstance();
     }
 
-    void Update() {
+    void Update()
+    {
         GetEscapeKey();
-
-        // Layer0
-        GetKeyDown(KeyCode.A);
-
-        // Layer1
-        GetKeyDown(KeyCode.Z);
-
-        // Scene0
-        GetKeyDown(KeyCode.V);
-        GetKeyDown(KeyCode.B);
-        GetKeyDown(KeyCode.N);
-        GetKeyDown(KeyCode.M);
-
-        // Scene1
         GetKeyDown(KeyCode.H);
     }
 
     void GetKeyDown(UnityEngine.KeyCode keyCode) {
         if (Input.GetKeyDown(keyCode)) {
+            Debug.Log(keyCode);
             _controlParameters.SetKeyboradInputValue(keyCode, true);
         }
-        _controlParameters.UpdateEffectStatus();
-        _controlParameters.UpdateScene0Parameters();
+        _controlParameters.UpdateScene1Parameters();
     }
 
     void GetEscapeKey() {
@@ -45,5 +35,4 @@ public class KeyboardInputController : MonoBehaviour {
             #endif
         }
     }
-
 }

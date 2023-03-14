@@ -18,6 +18,8 @@ public sealed class ControlParameters {
     public int _scene0_move_type { get; set; }
     public int _scene0_camera_switch_counter { get; set; }
 
+    public bool _scene1_flag { get; set; }
+
     public float _audioMaxValue { get; set; }
     public float[] _spectrum { get; set; }
     public float[] _rawAudio { get; set; }
@@ -51,10 +53,13 @@ public sealed class ControlParameters {
         // キーボード入力の状態管理用Hashを初期化
         _keyboardInput[KeyCode.A] = false;
         _keyboardInput[KeyCode.Z] = false;
+
         _keyboardInput[KeyCode.V] = false;
         _keyboardInput[KeyCode.B] = false;
         _keyboardInput[KeyCode.N] = false;
         _keyboardInput[KeyCode.M] = false;
+
+        _keyboardInput[KeyCode.H] = false;
 
     }
 
@@ -117,8 +122,10 @@ public sealed class ControlParameters {
             _scene0_camera_switch_counter++;
             _keyboardInput[KeyCode.M] = false; 
         }
+    }
 
-
+    public void UpdateScene1Parameters() {
+        _scene1_flag = _keyboardInput[KeyCode.H];
     }
 
     public bool GetEffect0Layer0Status() {
