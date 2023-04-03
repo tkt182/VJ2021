@@ -7,13 +7,26 @@ public class Phyllotaxis : MonoBehaviour
 
     ControlParameters _controlParameters;
 
-    public GameObject _dot;
-    public float _degree, _c;
-    public int _n;
-    public float _dotScale;
-    private Vector2 CalculatePhyllotaxis(float degree, float scale, int count){
-        double angle = count * (degree * Mathf.Deg2Rad);
-        float r = scale * Mathf.Sqrt(count);
+    public float _degree, _scale;
+    public int _numberStart;
+    public int _stepSize;
+    public int _maxIteration;
+
+    // Lerping
+    public bool _useLerping;
+    public float _intervalLerp;
+    private bool _isLerping;
+    private Vector3 _startPosition, _endPosition;
+    private float _timeStartedLerping;
+
+
+    private int _number;
+    private int _currentIteration;
+    private TrailRenderer _trailRenderer;
+
+    private Vector2 CalculatePhyllotaxis(float degree, float scale, int number){
+        double angle = number * (degree * Mathf.Deg2Rad);
+        float r = scale * Mathf.Sqrt(number);
 
         float x = r * (float)System.Math.Cos(angle);
         float y = r * (float)System.Math.Sin(angle);
@@ -23,23 +36,52 @@ public class Phyllotaxis : MonoBehaviour
     }
     private Vector2 _phyllotaxisPosition;
 
+    void StartLerping() {
+        _isLerping = true;
+        _timeStartedLerping = Time.time;
+        _phyllotaxisPosition = CalculatePhyllotaxis(_degree, _scale, _number);
+        _startPosition = this.transform.localPosition;
+        _endPosition = new Vector3(_phyllotaxisPosition.x, _phyllotaxisPosition.y, 0);
+    }
 
-    void Start()
-    {
+
+    void Awake() {
+        _trailRenderer = GetComponent<TrailRenderer>();
+        _number = _numberStart;
+        transform.localPosition = CalculatePhyllotaxis(_degree, _scale, _number);
+        if (_useLerping) {
+            StartLerping();
+        }
+    }
+
+    void Start() {
         _controlParameters = ControlParameters.GetInstance();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (_controlParameters._scene1_flag) {
-            _phyllotaxisPosition = CalculatePhyllotaxis(_degree, _c, _n);
-            GameObject dotInstance = (GameObject)Instantiate(_dot);
 
-            dotInstance.layer = 7;
-            dotInstance.transform.position = new Vector3(_phyllotaxisPosition.x, _phyllotaxisPosition.y, 20);
-            dotInstance.transform.localScale = new Vector3(_dotScale, _dotScale, _dotScale);
-            _n++;
+    private void FixedUpdate() {
+        if (_useLerping) {
+            if (_isLerping) {
+                float timeSinceStated = Time.time - _timeStartedLerping;
+                float percentageComplete = timeSinceStated / _intervalLerp;
+                transform.localPosition = Vector3.Lerp(_startPosition, _endPosition, percentageComplete);
+                if (percentageComplete >= 0.97f) {
+                    transform.localPosition = _endPosition;
+                    _number += _stepSize;
+                    _currentIteration++;
+                    if (_currentIteration <= _maxIteration) {
+                        StartLerping();
+                    } else {
+                        _isLerping = false;
+                    }
+                }
+            }
+        } else {
+            _phyllotaxisPosition = CalculatePhyllotaxis(_degree, _scale, _number);
+            transform.position = new Vector3(_phyllotaxisPosition.x, _phyllotaxisPosition.y, 20);
+            _number += _stepSize;
+            _currentIteration++;
+
         }
     }
 }
