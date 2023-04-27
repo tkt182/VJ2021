@@ -6,6 +6,8 @@ public class Phyllotaxis : MonoBehaviour
 {
 
     ControlParameters _controlParameters;
+    private Material _trailMat;
+    public Color _trailColor;
 
     public float _degree, _scale;
     public int _numberStart;
@@ -14,10 +16,12 @@ public class Phyllotaxis : MonoBehaviour
 
     // Lerping
     public bool _useLerping;
-    public float _intervalLerp;
     private bool _isLerping;
     private Vector3 _startPosition, _endPosition;
-    private float _timeStartedLerping;
+    private float _lerpPosTimer, _lerpPosSpeed;
+    public Vector2 _lerpPosSpeedMinMax;
+    public AnimationCurve _lerpPosAnimCurve;
+    public int _lerpPosBand;
 
 
     private int _number;
@@ -36,9 +40,7 @@ public class Phyllotaxis : MonoBehaviour
     }
     private Vector2 _phyllotaxisPosition;
 
-    void StartLerping() {
-        _isLerping = true;
-        _timeStartedLerping = Time.time;
+    void SetLerpPositions() {
         _phyllotaxisPosition = CalculatePhyllotaxis(_degree, _scale, _number);
         _startPosition = this.transform.localPosition;
         _endPosition = new Vector3(_phyllotaxisPosition.x, _phyllotaxisPosition.y, 0);
@@ -47,10 +49,14 @@ public class Phyllotaxis : MonoBehaviour
 
     void Awake() {
         _trailRenderer = GetComponent<TrailRenderer>();
+        _trailMat = new Material(_trailRenderer.material);
+        _trailMat.SetColor("_TintColor", _trailColor);
+        _trailRenderer.material = _trailMat;
         _number = _numberStart;
         transform.localPosition = CalculatePhyllotaxis(_degree, _scale, _number);
         if (_useLerping) {
-            StartLerping();
+            _isLerping = true;
+            SetLerpPositions();
         }
     }
 
@@ -58,7 +64,34 @@ public class Phyllotaxis : MonoBehaviour
         _controlParameters = ControlParameters.GetInstance();
     }
 
+    private void Update() {
+        if (_useLerping) {
+            if (_isLerping) {
 
+                float lerpPosBandValue = 0.0f;
+                if (_controlParameters._rawAudio != null) {
+                    lerpPosBandValue = _controlParameters._rawAudio[_lerpPosBand];
+                }
+                _lerpPosSpeed = Mathf.Lerp(_lerpPosSpeedMinMax.x, _lerpPosSpeedMinMax.y, _lerpPosAnimCurve.Evaluate(lerpPosBandValue));
+                _lerpPosTimer += Time.deltaTime * _lerpPosSpeed;
+                transform.localPosition = Vector3.Lerp(_startPosition, _endPosition, Mathf.Clamp01(_lerpPosTimer));
+                if (_lerpPosTimer >= 1) {
+                    _lerpPosTimer -= 1;
+                    _number += _stepSize;
+                    _currentIteration++;
+                    SetLerpPositions();
+                }
+            }
+        } else {
+            _phyllotaxisPosition = CalculatePhyllotaxis(_degree, _scale, _number);
+            transform.position = new Vector3(_phyllotaxisPosition.x, _phyllotaxisPosition.y, 20);
+            _number += _stepSize;
+            _currentIteration++;
+        }
+    }
+
+
+    /*
     private void FixedUpdate() {
         if (_useLerping) {
             if (_isLerping) {
@@ -84,4 +117,5 @@ public class Phyllotaxis : MonoBehaviour
 
         }
     }
+    */
 }
