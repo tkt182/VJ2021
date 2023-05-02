@@ -283,6 +283,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!1 &66352392
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +355,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &66352395
 TrailRenderer:
   serializedVersion: 2
@@ -504,6 +526,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &89641511
 TrailRenderer:
   serializedVersion: 2
@@ -664,6 +697,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &202285126
 TrailRenderer:
   serializedVersion: 2
@@ -773,6 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254200967}
   - component: {fileID: 254200966}
+  - component: {fileID: 254200965}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -780,6 +825,66 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &254200965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254200964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 254200967}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!20 &254200966
 Camera:
   m_ObjectHideFlags: 0
@@ -898,6 +1003,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &391708569
 TrailRenderer:
   serializedVersion: 2
@@ -1072,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20dca154f4dd38147bde3d5deee9b9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trailColor: {r: 0.07655405, g: 0.060988206, b: 0.84705883, a: 0.8352941}
+  _trailColor: {r: 0.06274511, g: 0.62201226, b: 0.84705883, a: 0.8352941}
   _degree: 2
   _scale: 0.05
   _numberStart: 10000
@@ -1107,6 +1223,17 @@ MonoBehaviour:
   _lerpPosBand: 1
   _repeat: 1
   _invert: 1
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &491615911
 TrailRenderer:
   serializedVersion: 2
@@ -1383,6 +1510,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &671750793
 TrailRenderer:
   serializedVersion: 2
@@ -1543,6 +1681,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &785500524
 TrailRenderer:
   serializedVersion: 2
@@ -1642,6 +1791,54 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!1 &791528076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791528077}
+  - component: {fileID: 791528078}
+  m_Layer: 7
+  m_Name: PostProcessVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791528077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791528076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885043057}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791528078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791528076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: b4cdcad71ada9ea4b97e2faab1b199b5, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &796873167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1900,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &796873170
 TrailRenderer:
   serializedVersion: 2
@@ -1837,6 +2045,7 @@ Transform:
   - {fileID: 1996158722}
   - {fileID: 1753641656}
   - {fileID: 491615909}
+  - {fileID: 791528077}
   - {fileID: 1089266384}
   - {fileID: 2024534424}
   m_Father: {fileID: 0}
@@ -1916,6 +2125,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &937229117
 TrailRenderer:
   serializedVersion: 2
@@ -2076,6 +2296,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &959988042
 TrailRenderer:
   serializedVersion: 2
@@ -2236,6 +2467,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &962689900
 TrailRenderer:
   serializedVersion: 2
@@ -2396,6 +2638,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &979465006
 TrailRenderer:
   serializedVersion: 2
@@ -2556,6 +2809,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1071906782
 TrailRenderer:
   serializedVersion: 2
@@ -2742,7 +3006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087781392}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 885043057}
@@ -2778,7 +3042,7 @@ Transform:
   m_Children:
   - {fileID: 1744835711}
   m_Father: {fileID: 885043057}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1089266385
 AudioListener:
@@ -2849,6 +3113,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1164498094
 TrailRenderer:
   serializedVersion: 2
@@ -3009,6 +3284,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1208004810
 TrailRenderer:
   serializedVersion: 2
@@ -3169,6 +3455,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1284934642
 TrailRenderer:
   serializedVersion: 2
@@ -3329,6 +3626,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1286771253
 TrailRenderer:
   serializedVersion: 2
@@ -3489,6 +3797,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1301754532
 TrailRenderer:
   serializedVersion: 2
@@ -3686,6 +4005,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1370965151
 TrailRenderer:
   serializedVersion: 2
@@ -3846,6 +4176,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1416399187
 TrailRenderer:
   serializedVersion: 2
@@ -3955,7 +4296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560546080}
   - component: {fileID: 1560546081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Scene1Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4049,6 +4390,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1569389758
 TrailRenderer:
   serializedVersion: 2
@@ -4209,6 +4561,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1590177723
 TrailRenderer:
   serializedVersion: 2
@@ -4369,6 +4732,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1598811520
 TrailRenderer:
   serializedVersion: 2
@@ -4566,6 +4940,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1663936128
 TrailRenderer:
   serializedVersion: 2
@@ -4726,6 +5111,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1697971649
 TrailRenderer:
   serializedVersion: 2
@@ -4886,6 +5282,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1709897156
 TrailRenderer:
   serializedVersion: 2
@@ -5234,6 +5641,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!1 &1815278597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,6 +5750,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &1834389916
 TrailRenderer:
   serializedVersion: 2
@@ -5544,7 +5973,7 @@ Transform:
   - {fileID: 1815278598}
   - {fileID: 1334516913}
   m_Father: {fileID: 885043057}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039921638
 GameObject:
@@ -5607,6 +6036,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &2039921641
 TrailRenderer:
   serializedVersion: 2
@@ -5767,6 +6207,17 @@ MonoBehaviour:
   _lerpPosBand: 0
   _repeat: 0
   _invert: 0
+  _useScaleAnimation: 0
+  _useCaleCurve: 0
+  _scaleAnimMinMax: {x: 0, y: 0}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scaleAnimSpeed: 0
+  _scaleBand: 0
 --- !u!96 &2084455420
 TrailRenderer:
   serializedVersion: 2

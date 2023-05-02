@@ -64,7 +64,8 @@ public class Phyllotaxis : MonoBehaviour
         _forward = true;
         _trailRenderer = GetComponent<TrailRenderer>();
         _trailMat = new Material(_trailRenderer.material);
-        _trailMat.SetColor("_TintColor", _trailColor);
+
+        _trailMat.color = _trailColor; // Standard Shader can use color attribute
         _trailRenderer.material = _trailMat;
         _number = _numberStart;
         transform.localPosition = CalculatePhyllotaxis(_degree, _currentIteration, _number);
