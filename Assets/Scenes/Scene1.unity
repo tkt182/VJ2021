@@ -284,7 +284,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -294,6 +294,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!1 &66352392
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +357,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -366,6 +367,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &66352395
 TrailRenderer:
   serializedVersion: 2
@@ -527,7 +529,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -537,6 +539,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &89641511
 TrailRenderer:
   serializedVersion: 2
@@ -698,7 +701,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -708,6 +711,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &202285126
 TrailRenderer:
   serializedVersion: 2
@@ -936,7 +940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254200964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 885043057}
@@ -1004,7 +1008,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -1014,6 +1018,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &391708569
 TrailRenderer:
   serializedVersion: 2
@@ -1189,11 +1194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trailColor: {r: 0.06274511, g: 0.62201226, b: 0.84705883, a: 0.8352941}
-  _degree: 2
-  _scale: 0.05
+  _degree: 90
+  _scale: 0.1
   _numberStart: 10000
   _stepSize: 1
-  _maxIteration: 180
+  _maxIteration: 4
   _useLerping: 1
   _lerpPosSpeedMinMax: {x: 50, y: 500}
   _lerpPosAnimCurve:
@@ -1222,18 +1227,46 @@ MonoBehaviour:
     m_RotationOrder: 4
   _lerpPosBand: 1
   _repeat: 1
-  _invert: 1
-  _useScaleAnimation: 0
-  _useCaleCurve: 0
-  _scaleAnimMinMax: {x: 0, y: 0}
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 1
+  _scaleAnimMinMax: {x: 0.1, y: 0.5}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 2
+      outSlope: -2.054703
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916992
+      value: -0.010295868
+      inSlope: -2.054703
+      outSlope: -2.054703
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _scaleAnimSpeed: 0
-  _scaleBand: 0
+  _scaleAnimSpeed: 1
+  _scaleBand: 1
+  _audioBoost: 10
 --- !u!96 &491615911
 TrailRenderer:
   serializedVersion: 2
@@ -1511,7 +1544,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -1521,6 +1554,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &671750793
 TrailRenderer:
   serializedVersion: 2
@@ -1682,7 +1716,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -1692,6 +1726,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &785500524
 TrailRenderer:
   serializedVersion: 2
@@ -1901,7 +1936,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -1911,6 +1946,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &796873170
 TrailRenderer:
   serializedVersion: 2
@@ -2126,7 +2162,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -2136,6 +2172,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &937229117
 TrailRenderer:
   serializedVersion: 2
@@ -2297,7 +2334,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -2307,6 +2344,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &959988042
 TrailRenderer:
   serializedVersion: 2
@@ -2468,7 +2506,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -2478,6 +2516,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &962689900
 TrailRenderer:
   serializedVersion: 2
@@ -2639,7 +2678,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -2649,6 +2688,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &979465006
 TrailRenderer:
   serializedVersion: 2
@@ -2810,7 +2850,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -2820,6 +2860,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1071906782
 TrailRenderer:
   serializedVersion: 2
@@ -3114,7 +3155,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -3124,6 +3165,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1164498094
 TrailRenderer:
   serializedVersion: 2
@@ -3285,7 +3327,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -3295,6 +3337,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1208004810
 TrailRenderer:
   serializedVersion: 2
@@ -3456,7 +3499,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -3466,6 +3509,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1284934642
 TrailRenderer:
   serializedVersion: 2
@@ -3627,7 +3671,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -3637,6 +3681,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1286771253
 TrailRenderer:
   serializedVersion: 2
@@ -3798,7 +3843,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -3808,6 +3853,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1301754532
 TrailRenderer:
   serializedVersion: 2
@@ -4006,7 +4052,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -4016,6 +4062,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1370965151
 TrailRenderer:
   serializedVersion: 2
@@ -4177,7 +4224,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -4187,6 +4234,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1416399187
 TrailRenderer:
   serializedVersion: 2
@@ -4391,7 +4439,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -4401,6 +4449,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1569389758
 TrailRenderer:
   serializedVersion: 2
@@ -4562,7 +4611,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -4572,6 +4621,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1590177723
 TrailRenderer:
   serializedVersion: 2
@@ -4733,7 +4783,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -4743,6 +4793,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1598811520
 TrailRenderer:
   serializedVersion: 2
@@ -4941,7 +4992,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -4951,6 +5002,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1663936128
 TrailRenderer:
   serializedVersion: 2
@@ -5112,7 +5164,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -5122,6 +5174,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1697971649
 TrailRenderer:
   serializedVersion: 2
@@ -5283,7 +5336,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -5293,6 +5346,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1709897156
 TrailRenderer:
   serializedVersion: 2
@@ -5642,7 +5696,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -5652,6 +5706,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!1 &1815278597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5751,7 +5806,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -5761,6 +5816,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &1834389916
 TrailRenderer:
   serializedVersion: 2
@@ -6037,7 +6093,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -6047,6 +6103,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &2039921641
 TrailRenderer:
   serializedVersion: 2
@@ -6208,7 +6265,7 @@ MonoBehaviour:
   _repeat: 0
   _invert: 0
   _useScaleAnimation: 0
-  _useCaleCurve: 0
+  _useScaleCurve: 0
   _scaleAnimMinMax: {x: 0, y: 0}
   _scaleAnimCurve:
     serializedVersion: 2
@@ -6218,6 +6275,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _scaleAnimSpeed: 0
   _scaleBand: 0
+  _audioBoost: 0
 --- !u!96 &2084455420
 TrailRenderer:
   serializedVersion: 2

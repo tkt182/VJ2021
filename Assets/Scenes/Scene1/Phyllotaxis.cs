@@ -44,12 +44,14 @@ public class Phyllotaxis : MonoBehaviour
     public bool _repeat, _invert;
 
     // Scaling
-    public bool _useScaleAnimation, _useCaleCurve;
+    public bool _useScaleAnimation, _useScaleCurve;
     public Vector2 _scaleAnimMinMax;
     public AnimationCurve _scaleAnimCurve;
     public float _scaleAnimSpeed;
     public int _scaleBand;
     private float _scaleTimer, _currentScale;
+
+    public float _audioBoost;
 
 
     void SetLerpPositions() {
@@ -80,10 +82,11 @@ public class Phyllotaxis : MonoBehaviour
     }
 
     private void Update() {
+        if(_controlParameters._rawAudio == null) return;
 
-        if(_useCaleCurve) {
-            if(_useCaleCurve) {
-                _scaleTimer += (_scaleAnimSpeed * _controlParameters._rawAudio[_scaleBand]) * Time.deltaTime;
+        if(_useScaleAnimation) {
+            if(_useScaleCurve) {
+                _scaleTimer += (_scaleAnimSpeed * _controlParameters._rawAudio[_scaleBand] * _audioBoost) * Time.deltaTime;
                 if (_scaleTimer >= 1) {
                     _scaleTimer -= 1;
                 }
