@@ -7,7 +7,7 @@ public class Scene1AudioInputSwitcher : MonoBehaviour
 
     ControlParameters _controlParameters;
     void Start() {
-        // Scene0単体起動ならAudioを有効にする
+        // Scene1単体起動ならAudioを有効にする
         _controlParameters = ControlParameters.GetInstance();
         if (!_controlParameters._main_scene_is_loaded) {
             // 非アクティブなので、親からたどる
