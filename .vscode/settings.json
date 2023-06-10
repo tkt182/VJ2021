@@ -51,7 +51,10 @@
 		"library/":true,
 		"obj/":true,
 		"Obj/":true,
-		"ProjectSettings/":true,		"temp/":true,
+		"ProjectSettings/":true,
+		"temp/":true,
 		"Temp/":true
-	}
+	},
+	"aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+	"aws.telemetry": false
 }
