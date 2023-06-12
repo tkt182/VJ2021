@@ -61,6 +61,9 @@ public class SubSceneAudioInputController : MonoBehaviour {
                 );
             }
         }
+
+        MakeFreqBand();
+
     }
 
     float GetMaxValue(System.ReadOnlySpan<float> source) {
@@ -71,5 +74,24 @@ public class SubSceneAudioInputController : MonoBehaviour {
 
         return maxValue;
     }
+
+    void MakeFreqBand() {
+        _controlParameters._freqBand = new float[5];
+
+        int count = 0;
+        for(int i = 0; i < 5; i++) {
+            float average = 0.0f;
+            int sampleCount = (int)Mathf.Pow(2, i) * 2;
+            for (int j = 0; j < sampleCount; j++) {
+                average += _controlParameters._rawAudio[count] * (count + 1);
+                count++;
+            }
+
+            average /= count;
+
+            _controlParameters._freqBand[i] = average * 10;
+        }
+    }
+
 }
 

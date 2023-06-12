@@ -24,6 +24,8 @@ public sealed class ControlParameters {
     public float[] _spectrum { get; set; }
     public float[] _rawAudio { get; set; }
 
+    public float[] _freqBand { get; set; }  // バッファをまとめる
+
     public bool _useAudioFile { get; set; }
 
     private Dictionary<UnityEngine.KeyCode, bool> _keyboardInput =

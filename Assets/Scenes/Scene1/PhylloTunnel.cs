@@ -20,6 +20,8 @@ public class PhylloTunnel : MonoBehaviour
         if (_controlParameters._rawAudio == null)  return;
         _tunnel.position = new Vector3(_tunnel.position.x, _tunnel.position.y,
           _tunnel.position.z + ((_controlParameters._rawAudio[0] + _tunnelInitialSpeed) * _tunnelSpeed));
+        //_tunnel.position = new Vector3(_tunnel.position.x, _tunnel.position.y,
+          //_tunnel.position.z + ((_controlParameters._freqBand[0] + _tunnelInitialSpeed) * _tunnelSpeed));
 
         this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, _tunnel.position.z + _cameraDistance);
     }
